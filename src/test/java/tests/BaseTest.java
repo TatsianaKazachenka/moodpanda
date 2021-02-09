@@ -13,7 +13,7 @@ public class BaseTest implements IConstantsTest {
 
     LoginPage loginPage;
     FeedPage feedPage;
-    RateYourHappiness rateYourHappiness;
+    RateYourHappinessPage rateYourHappiness;
     MoodUpdateModal moodUpdateModal;
 
     LoginSteps loginSteps;
@@ -37,7 +37,7 @@ public class BaseTest implements IConstantsTest {
     public void initPages() {
         loginPage = new LoginPage();
         feedPage = new FeedPage();
-        rateYourHappiness = new RateYourHappiness();
+        rateYourHappiness = new RateYourHappinessPage();
         moodUpdateModal = new MoodUpdateModal();
     }
 

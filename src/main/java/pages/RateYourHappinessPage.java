@@ -4,14 +4,14 @@ import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class RateYourHappiness {
+public class RateYourHappinessPage {
     public static final String SLIDER_CSS = ".ui-slider-handle";
     public static final String BTN_UPDATE_CSS = ".ButtonUpdate";
     public static final String BTN_YESTERDAY_CSS = ".ResetYesterday";
     public static final String DESCRIPTION_CSS = "#TextBoxUpdateMoodTag";
     public static final String TEXT_MOOD_BTN = "Update Mood to ";
 
-    public RateYourHappiness updateMood(int moodValue, String description) {
+    public RateYourHappinessPage updateMood(int moodValue, String description) {
         $(SLIDER_CSS).click();
         int defaultMood = 5;
         Keys direction;
@@ -32,7 +32,7 @@ public class RateYourHappiness {
         return new MoodUpdateModal();
     }
 
-    public RateYourHappiness clickYesterday() {
+    public RateYourHappinessPage clickYesterday() {
         $(BTN_YESTERDAY_CSS).click();
         return this;
     }

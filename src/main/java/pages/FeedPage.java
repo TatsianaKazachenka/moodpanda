@@ -22,17 +22,17 @@ public class FeedPage {
         return this;
     }
 
-    public RateYourHappiness clickOnUpdateBtn() {
+    public RateYourHappinessPage clickOnUpdateBtn() {
         $(UPDATE_MOOD_BTN_CSS).click();
-        return new RateYourHappiness();
+        return new RateYourHappinessPage();
     }
 
-    public String textPost() {
+    public String getPostText() {
         String text = $(FIRST_POST_CSS).find(TEXT_POST_CSS).getText();
         return text;
     }
 
-    public int moodLevel() {
+    public int getMoodLevel() {
         String level = $(FIRST_POST_CSS).find(BADGE_POST_CSS).getText();
         return Integer.parseInt(level);
     }

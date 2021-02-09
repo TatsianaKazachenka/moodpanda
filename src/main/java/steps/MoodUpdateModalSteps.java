@@ -9,7 +9,7 @@ public class MoodUpdateModalSteps {
         page = new FeedPage();
     }
 
-    public MoodUpdateModal fullingFieldAndGoToDiary(int moodValue, String description) {
+    public MoodUpdateModal updateMoodAndGoToDiary(int moodValue, String description) {
         return page
                 .clickOnUpdateBtn()
                 .updateMood(moodValue, description)

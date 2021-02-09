@@ -17,27 +17,27 @@ public class MoodPandaTest extends BaseTest {
     }
 
     @Test(description = "check the description update in the post")
-    public void DescriptionTest() {
+    public void descriptionTest() {
         int moodValue = 8;
         String description = "Hello!";
         loginSteps.login(EMAIL, PASSWORD);
-        moodUpdateModalSteps.fullingFieldAndGoToDiary(moodValue, description);
-        String textPost = feedPage.textPost();
+        moodUpdateModalSteps.updateMoodAndGoToDiary(moodValue, description);
+        String textPost = feedPage.getPostText();
         Assert.assertEquals(textPost, description);
     }
 
     @Test(description = "check the value mood update in the post")
-    public void LevelMoodTest() {
+    public void levelMoodTest() {
         int moodValue = 8;
         String description = "Hello!";
         loginSteps.login(EMAIL, PASSWORD);
-        moodUpdateModalSteps.fullingFieldAndGoToDiary(moodValue, description);
-        int level = feedPage.moodLevel();
+        moodUpdateModalSteps.updateMoodAndGoToDiary(moodValue, description);
+        int level = feedPage.getMoodLevel();
         Assert.assertEquals(moodValue, level);
     }
 
     @Test(description = "check the number of hugs after clicking")
-    public void HugTest() {
+    public void hugTest() {
         loginSteps.login(EMAIL, PASSWORD);
         int firstHugs = feedPage.getCountHugs();
         feedPage.clickHug().waitForCommentOpened();
